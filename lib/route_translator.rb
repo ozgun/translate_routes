@@ -151,7 +151,7 @@ class RouteTranslator
 
       # save original routes and clear route set
       original_routes = route_set.routes.dup                     # Array [routeA, routeB, ...]
-
+      original_routes.delete_if{|r| r.path == '/assets'}
       original_named_routes = route_set.named_routes.routes.dup  # Hash {:name => :route}
 
       reset_route_set route_set
