@@ -215,7 +215,8 @@ class RouteTranslator
 
     # Add prefix for all non-default locales
     def add_prefix? locale
-      !default_locale?(locale)
+      #!default_locale?(locale)
+      true
     end
 
     # Translates a path and adds the locale prefix.
